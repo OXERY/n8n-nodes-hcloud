@@ -6,8 +6,10 @@ import * as soft_reboot from './soft_reboot';
 import * as shutdown from './shutdown';
 import * as reset from './reset';
 import * as change_server_type from './change_server_type';
+import * as enable_backup from './enable_backup';
+import * as disable_backup from './disable_backup';
 
-export { create_image, power_off, power_on, soft_reboot, shutdown, reset, change_server_type };
+export { create_image, power_off, power_on, soft_reboot, shutdown, reset, change_server_type, enable_backup, disable_backup };
 
 export const descriptions: INodeProperties[] = [
 	{
@@ -69,6 +71,18 @@ export const descriptions: INodeProperties[] = [
 					'Changes the type (Cores, RAM and disk sizes) of a Server, Server must be powered off for this command to succeed.',
 				action: 'Change a Servers Server-type',
 			},
+			{
+				name: 'Enable Backup',
+				value: 'enable_backup',
+				description: 'Enables Hetzner backups for a server.',
+				action: 'Enable Backup For a Server',
+			},
+			{
+				name: 'Disable Backup',
+				value: 'disable_backup',
+				description: 'Disables Hetzner backups for a server.',
+				action: 'Disable Backup For a Server',
+			},
 		],
 		default: 'power_off',
 	},
@@ -79,4 +93,6 @@ export const descriptions: INodeProperties[] = [
 	...shutdown.description,
 	...reset.description,
 	...change_server_type.description,
+	...enable_backup.description,
+	...disable_backup.description,
 ];
