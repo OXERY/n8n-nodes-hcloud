@@ -13,7 +13,7 @@ export async function getServers(this: ILoadOptionsFunctions): Promise<INodeProp
 		uri: `https://api.hetzner.cloud/v1/servers`,
 		json: true,
 	};
-	let results = await helpPaginate(this, 'hetznercloud', options, new Array<any>(), 'servers');
+	let results = await helpPaginate(this, 'hcloud', options, new Array<any>(), 'servers');
 	if (results) {
 		for (const server of results) {
 			returnData.push({
@@ -34,7 +34,7 @@ export async function getFirewalls(this: ILoadOptionsFunctions): Promise<INodePr
 		json: true,
 		timeout: 2000,
 	};
-	let results = await helpPaginate(this, 'hetznercloud', options, new Array<any>(), 'firewalls');
+	let results = await helpPaginate(this, 'hcloud', options, new Array<any>(), 'firewalls');
 	if (results) {
 		for (const firewall of results) {
 			returnData.push({
@@ -58,7 +58,7 @@ export async function getServertypes(this: ILoadOptionsFunctions): Promise<INode
 
 	const servertypelist = await this.helpers.requestWithAuthentication.call(
 		this,
-		'hetznercloud',
+		'hcloud',
 		options,
 	);
 
@@ -81,7 +81,7 @@ export async function getImages(this: ILoadOptionsFunctions): Promise<INodePrope
 		uri: `https://api.hetzner.cloud/v1/images`,
 		json: true,
 	};
-	let results = await helpPaginate(this, 'hetznercloud', options, new Array<any>(), 'images');
+	let results = await helpPaginate(this, 'hcloud', options, new Array<any>(), 'images');
 	console.log('Pagination size: ', results.length);
 	if (results) {
 		for (const image of results) {
@@ -102,7 +102,7 @@ export async function getLocations(this: ILoadOptionsFunctions): Promise<INodePr
 		uri: `https://api.hetzner.cloud/v1/datacenters`,
 		json: true,
 	};
-	let results = await helpPaginate(this, 'hetznercloud', options, new Array<any>(), 'datacenters');
+	let results = await helpPaginate(this, 'hcloud', options, new Array<any>(), 'datacenters');
 	//	console.log('Pagination size: ', results.length);
 	if (results) {
 		for (const datacenter of results) {
@@ -123,7 +123,7 @@ export async function getVolumes(this: ILoadOptionsFunctions): Promise<INodeProp
 		uri: `https://api.hetzner.cloud/v1/volumes`,
 		json: true,
 	};
-	let results = await helpPaginate(this, 'hetznercloud', options, new Array<any>(), 'volumes');
+	let results = await helpPaginate(this, 'hcloud', options, new Array<any>(), 'volumes');
 	//	console.log('Pagination size: ', results.length);
 	if (results) {
 		for (const volume of results) {
@@ -145,7 +145,7 @@ export async function getDatacenters(this: ILoadOptionsFunctions): Promise<INode
 		uri: `https://api.hetzner.cloud/v1/datacenters`,
 		json: true,
 	};
-	let results = await helpPaginate(this, 'hetznercloud', options, new Array<any>(), 'datacenters');
+	let results = await helpPaginate(this, 'hcloud', options, new Array<any>(), 'datacenters');
 	//	console.log('Pagination size: ', results.length);
 	if (results) {
 		for (const datacenter of results) {
@@ -166,7 +166,7 @@ export async function getSshkeys(this: ILoadOptionsFunctions): Promise<INodeProp
 		uri: `https://api.hetzner.cloud/v1/ssh_keys`,
 		json: true,
 	};
-	let results = await helpPaginate(this, 'hetznercloud', options, new Array<any>(), 'ssh_keys');
+	let results = await helpPaginate(this, 'hcloud', options, new Array<any>(), 'ssh_keys');
 	//	console.log('Pagination size: ', results.length);
 	if (results) {
 		for (const key of results) {

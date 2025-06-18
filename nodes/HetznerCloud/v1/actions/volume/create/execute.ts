@@ -31,7 +31,7 @@ export async function create(
 
 	const responseData = await this.helpers.requestWithAuthentication.call(
 		this,
-		'hetznercloud',
+		'hcloud',
 		options,
 	);
 	return this.helpers.returnJsonArray(responseData as IDataObject[]);

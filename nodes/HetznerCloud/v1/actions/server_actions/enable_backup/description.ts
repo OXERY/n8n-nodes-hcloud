@@ -1,6 +1,6 @@
 import type { ServerActionsProperties } from '../../Interfaces';
 
-export const enable_backupDescription: ServerActionsProperties = [
+export const enableBackupDescription: ServerActionsProperties = [
 	{
 		displayName: 'server id',
 		name: 'id',

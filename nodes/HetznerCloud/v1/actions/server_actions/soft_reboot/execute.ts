@@ -17,7 +17,7 @@ export async function soft_reboot(
 
 	const responseData = await this.helpers.requestWithAuthentication.call(
 		this,
-		'hetznercloud',
+		'hcloud',
 		options,
 	);
 

@@ -16,7 +16,7 @@ export async function remove(
 
 	const responseData = await this.helpers.requestWithAuthentication.call(
 		this,
-		'hetznercloud',
+		'hcloud',
 		options,
 	);
 

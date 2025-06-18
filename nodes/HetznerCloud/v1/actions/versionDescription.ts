@@ -13,8 +13,8 @@ import * as volume from './volume';
 import * as server_actions from './server_actions';
 
 export const versionDescription: INodeTypeDescription = {
-	displayName: 'HetznerCloud',
-	name: 'hetznercloud',
+	displayName: 'Hetzner hcloud',
+	name: 'hcloud',
 	icon: 'file:hetznercloud.svg',
 	group: ['output'],
 	version: 1,
@@ -27,7 +27,7 @@ export const versionDescription: INodeTypeDescription = {
 	outputs: ['main'],
 	credentials: [
 		{
-			name: 'hetznercloud',
+			name: 'hcloud',
 			required: true,
 		},
 	],

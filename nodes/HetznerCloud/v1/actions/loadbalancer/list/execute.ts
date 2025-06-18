@@ -13,7 +13,7 @@ export async function list(this: IExecuteFunctions, index: number): Promise<INod
 
 	const responseData = await this.helpers.requestWithAuthentication.call(
 		this,
-		'hetznercloud',
+		'hcloud',
 		options,
 	);
 

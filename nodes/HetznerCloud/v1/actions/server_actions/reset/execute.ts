@@ -14,7 +14,7 @@ export async function reset(this: IExecuteFunctions, index: number): Promise<INo
 
 	const responseData = await this.helpers.requestWithAuthentication.call(
 		this,
-		'hetznercloud',
+		'hcloud',
 		options,
 	);
 

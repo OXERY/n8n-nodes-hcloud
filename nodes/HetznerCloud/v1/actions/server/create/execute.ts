@@ -88,7 +88,7 @@ export async function create(
 	console.log(options);
 	const responseData = await this.helpers.requestWithAuthentication.call(
 		this,
-		'hetznercloud',
+		'hcloud',
 		options,
 	);
 

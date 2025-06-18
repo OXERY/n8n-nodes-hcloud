@@ -1,8 +1,14 @@
-# n8n-nodes-hetznercloud
+# n8n-nodes-hcloud
 
 ![n8n.io - Workflow Automation](https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-logo.png)
 
-This repository is the basis for the creation of the Hetzner Cloud API n8n community node available at https://www.npmjs.com/package/n8n-nodes-hetznercloud. This community node always contains the latest updates and fixes. Every change will also be merged into the main product n8n, but sometimes it takes time before the pull requests are accepted.
+This is a fork of https://www.npmjs.com/package/n8n-nodes-hetznercloud, as the developer seems to have abandoned the project.
+I wanted to also be able to enable backup for Hetzner Cloud machines, therefore forked it - and here it is. :-)
+The Node is available at https://www.npmjs.com/package/n8n-nodes-hcloud
+
+Additional features:
+- Enable / Disable server backup
+- Change server protection setting
 
 ## About this node
 
@@ -17,7 +23,7 @@ Currently, n8n is not shipped with this Hetzner Cloud API node. Therefore an ins
 1. Open your n8n server.
 1. Go to **Settings > Community Nodes**.
 1. Select **Install**.
-1. Enter `n8n-nodes-hetznercloud` in **Enter npm package name**.
+1. Enter `n8n-nodes-hcloud` in **Enter npm package name**.
 1. Agree to the [risks](https://docs.n8n.io/integrations/community-nodes/risks/) of using community nodes: select **I understand the risks of installing unverified code from a public source**.
 1. Select **Install**.
 
@@ -47,7 +53,7 @@ npm link
 
 ```
 cd ~/.n8n/nodes
-npm link n8n-nodes-hetznercloud
+npm link n8n-nodes-hcloud
 ```
 
 5. Start the local development area. You need two consoles:

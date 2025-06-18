@@ -1,7 +1,7 @@
 import type { IExecuteFunctions, IDataObject, INodeExecutionData } from 'n8n-workflow';
 import { OptionsWithUri } from 'request';
 
-export async function disable_backup(
+export async function disableBackup(
 	this: IExecuteFunctions,
 	index: number,
 ): Promise<INodeExecutionData[]> {
@@ -17,7 +17,7 @@ export async function disable_backup(
 
 	const responseData = await this.helpers.requestWithAuthentication.call(
 		this,
-		'hetznercloud',
+		'hcloud',
 		options,
 	);
 

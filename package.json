@@ -1,19 +1,17 @@
 {
-	"name": "n8n-nodes-hetznercloud",
-	"version": "0.2.0",
-	"description": "n8n app to interact with the Cloud API from Hetzner.",
+	"name": "n8n-nodes-hcloud",
+	"version": "0.2.6",
+	"description": "n8n app to interact with the Cloud API from Hetzner. Slightly enhanced.",
 	"keywords": [
 		"n8n-community-node-package"
 	],
 	"license": "MIT",
-	"homepage": "https://seatable.io/integrations/",
 	"author": {
-		"name": "Christoph Dyllick-Brenzinger",
-		"email": "cdb@seatable.io"
+		"name": "Oxery"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/christophdb/n8n-hetzner-cloud.git"
+		"url": "https://github.com/OXERY/n8n-nodes-hcloud.git"
 	},
 	"main": "index.js",
 	"scripts": {

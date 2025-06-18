@@ -1,4 +1,3 @@
-import { enable_backup as execute } from './execute';
-import { enable_backupDescription as description } from './description';
-
+import { enableBackup as execute } from './execute';
+import { enableBackupDescription as description } from './description';
 export { description, execute };

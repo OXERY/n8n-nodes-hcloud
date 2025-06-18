@@ -6,8 +6,8 @@ import { HetznerCloudV1 } from './v1/HetznerCloudV1.node';
 export class HetznerCloud extends VersionedNodeType {
 	constructor() {
 		const baseDescription: INodeTypeBaseDescription = {
-			displayName: 'HetznerCloud',
-			name: 'hetznercloud',
+			displayName: 'Hetzner hcloud',
+			name: 'hcloud',
 			icon: 'file:hetznercloud.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["resource"] + ": " + $parameter["operation"]}}',

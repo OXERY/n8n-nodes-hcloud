@@ -6,7 +6,7 @@ import type {
 } from 'n8n-workflow';
 
 export class HetznerCloudApi implements ICredentialType {
-	name = 'hetznercloud';
+	name = 'hcloud';
 	displayName = 'Hetzner Cloud API';
 	documentationUrl = 'https://seatable.io/docs/n8n-integration/...';
 	properties: INodeProperties[] = [

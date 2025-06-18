@@ -18,7 +18,10 @@ type HetznerCloudMap = {
 		| 'soft_reboot'
 		| 'shutdown'
 		| 'reset'
-		| 'change_server_type';
+		| 'change_server_type'
+		| 'enable_backup'
+		| 'disable_backup'
+		| 'change_protection';
 };
 
 export type HetznerCloud = AllEntities<HetznerCloudMap>;

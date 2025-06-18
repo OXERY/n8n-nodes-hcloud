@@ -17,7 +17,7 @@ export async function get(this: IExecuteFunctions, index: number): Promise<INode
 
 	const responseData = await this.helpers.requestWithAuthentication.call(
 		this,
-		'hetznercloud',
+		'hcloud',
 		options,
 	);
 

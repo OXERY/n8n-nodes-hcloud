@@ -1,17 +1,17 @@
 {
-	"node": "n8n-nodes-base.hetznercloud",
+	"node": "n8n-nodes-base.hcloud",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": ["Data & Storage"],
 	"resources": {
 		"credentialDocumentation": [
 			{
-				"url": "https://docs.n8n.io/credentials/hetznercloud"
+				"url": "https://github.com/OXERY/n8n-nodes-hcloud"
 			}
 		],
 		"primaryDocumentation": [
 			{
-				"url": "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.hetznercloud/"
+				"url": "https://github.com/OXERY/n8n-nodes-hcloud"
 			}
 		]
 	}

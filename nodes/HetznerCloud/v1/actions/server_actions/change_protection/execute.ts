@@ -1,18 +1,27 @@
 import type { IExecuteFunctions, IDataObject, INodeExecutionData } from 'n8n-workflow';
 import { OptionsWithUri } from 'request';
 
-export async function update(
+export async function changeProtection(
 	this: IExecuteFunctions,
 	index: number,
 ): Promise<INodeExecutionData[]> {
 	const id = this.getNodeParameter('id', index) as object;
+	const delete_protection = this.getNodeParameter('delete_protection', index) as boolean;
+	const rebuild_protection = this.getNodeParameter('rebuild_protection', index) as boolean;
 
 	const options: OptionsWithUri = {
-		method: 'UPDATE',
+		method: 'POST',
+		uri: `https://api.hetzner.cloud/v1/servers/` + id + '/actions/change_protection',
 		qs: {},
-		uri: `https://api.hetzner.cloud/v1/images/` + id,
+		body: {
+			delete: delete_protection,
+			rebuild: rebuild_protection,
+		},
 		json: true,
 	};
+
+	// console.log(options);
+
 	const responseData = await this.helpers.requestWithAuthentication.call(
 		this,
 		'hcloud',

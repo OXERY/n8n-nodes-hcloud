@@ -8,8 +8,9 @@ import * as reset from './reset';
 import * as change_server_type from './change_server_type';
 import * as enable_backup from './enable_backup';
 import * as disable_backup from './disable_backup';
+import * as change_protection from './change_protection';
 
-export { create_image, power_off, power_on, soft_reboot, shutdown, reset, change_server_type, enable_backup, disable_backup };
+export { create_image, power_off, power_on, soft_reboot, shutdown, reset, change_server_type, enable_backup, disable_backup, change_protection };
 
 export const descriptions: INodeProperties[] = [
 	{
@@ -83,6 +84,13 @@ export const descriptions: INodeProperties[] = [
 				description: 'Disables Hetzner backups for a server.',
 				action: 'Disable Backup For a Server',
 			},
+			{
+				name: 'Change Protection',
+				value: 'change_protection',
+				description:
+					'Changes the protection of a Server against accidental deletion or rebuild.',
+				action: 'Change a Servers Protection',
+			},
 		],
 		default: 'power_off',
 	},
@@ -95,4 +103,5 @@ export const descriptions: INodeProperties[] = [
 	...change_server_type.description,
 	...enable_backup.description,
 	...disable_backup.description,
+	...change_protection.description
 ];
