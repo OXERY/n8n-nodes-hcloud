@@ -11,6 +11,8 @@ import * as network from './network';
 import * as ssh from './ssh';
 import * as volume from './volume';
 import * as server_actions from './server_actions';
+import * as datacenter from './datacenter';
+import * as server_types from './server_types';
 
 import { HetznerCloud } from './Interfaces';
 
@@ -54,6 +56,10 @@ export async function router(this: IExecuteFunctions): Promise<INodeExecutionDat
 				responseData = await volume[hetzner.operation].execute.call(this, i);
 			} else if (hetzner.resource === 'server_actions') {
 				responseData = await server_actions[hetzner.operation].execute.call(this, i);
+			} else if (hetzner.resource === 'datacenter') {
+				responseData = await datacenter[hetzner.operation].execute.call(this, i);
+			} else if (hetzner.resource === 'server_types') {
+				responseData = await server_types[hetzner.operation].execute.call(this, i);
 			}
 
 			const executionData = this.helpers.constructExecutionMetaData(

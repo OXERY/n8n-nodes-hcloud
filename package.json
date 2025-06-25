@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-hcloud",
-	"version": "0.2.6",
+	"version": "0.2.9",
 	"description": "n8n app to interact with the Cloud API from Hetzner. Slightly enhanced.",
 	"keywords": [
 		"n8n-community-node-package"
