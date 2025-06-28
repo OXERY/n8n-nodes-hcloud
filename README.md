@@ -9,6 +9,7 @@ The Node is available at https://www.npmjs.com/package/n8n-nodes-hcloud
 Additional features:
 - Enable / Disable server backup
 - Change server protection setting
+- Get info about datacenters like available vm types and prices of vms
 
 ## About this node
 
