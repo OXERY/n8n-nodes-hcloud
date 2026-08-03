@@ -22,7 +22,6 @@ type HetznerCloudMap = {
 		| 'enable_backup'
 		| 'disable_backup'
 		| 'change_protection';
-	datacenter: 'list' | 'get';
 	server_types: 'list' | 'get';
 };
 
@@ -39,7 +38,6 @@ export type HetznerCloudNetwork = Entity<HetznerCloudMap, 'network'>;
 export type HetznerCloudssh = Entity<HetznerCloudMap, 'ssh'>;
 export type HetznerCloudVolume = Entity<HetznerCloudMap, 'volume'>;
 export type HetznerCloudServerActions = Entity<HetznerCloudMap, 'server_actions'>;
-export type HetznerCloudDatacenter = Entity<HetznerCloudMap, 'datacenter'>;
 export type HetznerCloudServerType = Entity<HetznerCloudMap, 'server_types'>;
 
 export type ImageProperties = PropertiesOf<HetznerCloudImage>;
@@ -53,7 +51,6 @@ export type networkProperties = PropertiesOf<HetznerCloudNetwork>;
 export type sshProperties = PropertiesOf<HetznerCloudssh>;
 export type volumeProperties = PropertiesOf<HetznerCloudVolume>;
 export type ServerActionsProperties = PropertiesOf<HetznerCloudServerActions>;
-export type DatacenterProperties = PropertiesOf<HetznerCloudDatacenter>;
 export type ServerTypeProperties = PropertiesOf<HetznerCloudServerType>;
 
 export interface rules {

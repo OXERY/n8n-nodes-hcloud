@@ -8,7 +8,7 @@ export async function update(
 	const id = this.getNodeParameter('id', index) as object;
 
 	const options: OptionsWithUri = {
-		method: 'UPDATE',
+		method: 'PUT',
 		qs: {},
 		uri: `https://api.hetzner.cloud/v1/images/` + id,
 		json: true,

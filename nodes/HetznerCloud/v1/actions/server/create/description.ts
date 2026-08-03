@@ -17,25 +17,6 @@ export const createDescription: ServerProperties = [
 		description: 'Auto-mount Volumes after attach',
 	},
 	{
-		displayName: 'datacenter',
-		name: 'datacenter',
-		type: 'options',
-		required: false,
-		placeholder: '',
-		displayOptions: {
-			show: {
-				resource: ['server'],
-				operation: ['create'],
-			},
-		},
-		typeOptions: {
-			loadOptionsMethod: 'getDatacenters',
-		},
-		default: '',
-		description:
-			'ID or name of Datacenter to create Server in (must not be used together with location)',
-	},
-	{
 		displayName: 'firewalls',
 		name: 'firewalls',
 		type: 'fixedCollection',
@@ -134,9 +115,12 @@ export const createDescription: ServerProperties = [
 	{
 		displayName: 'location',
 		name: 'location',
-		type: 'string',
+		type: 'options',
 		required: false,
 		placeholder: '',
+		typeOptions: {
+			loadOptionsMethod: 'getLocations',
+		},
 		displayOptions: {
 			show: {
 				resource: ['server'],
@@ -144,8 +128,7 @@ export const createDescription: ServerProperties = [
 			},
 		},
 		default: '',
-		description:
-			'ID or name of Location to create Server in (must not be used together with datacenter)',
+		description: 'ID or name of Location to create Server in',
 	},
 	{
 		displayName: 'name',

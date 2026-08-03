@@ -99,16 +99,16 @@ export async function getLocations(this: ILoadOptionsFunctions): Promise<INodePr
 	let options: OptionsWithUri = {
 		method: 'GET',
 		qs: {},
-		uri: `https://api.hetzner.cloud/v1/datacenters`,
+		uri: `https://api.hetzner.cloud/v1/locations`,
 		json: true,
 	};
-	let results = await helpPaginate(this, 'hcloud', options, new Array<any>(), 'datacenters');
+	let results = await helpPaginate(this, 'hcloud', options, new Array<any>(), 'locations');
 	//	console.log('Pagination size: ', results.length);
 	if (results) {
-		for (const datacenter of results) {
+		for (const location of results) {
 			returnData.push({
-				name: datacenter.location.description,
-				value: datacenter.location.name,
+				name: location.description,
+				value: location.name,
 			});
 		}
 	}
@@ -135,29 +135,6 @@ export async function getVolumes(this: ILoadOptionsFunctions): Promise<INodeProp
 	}
 	return returnData;
 }
-// https://api.hetzner.cloud/v1/datacenters
-
-export async function getDatacenters(this: ILoadOptionsFunctions): Promise<INodePropertyOptions[]> {
-	const returnData: INodePropertyOptions[] = [];
-	let options: OptionsWithUri = {
-		method: 'GET',
-		qs: {},
-		uri: `https://api.hetzner.cloud/v1/datacenters`,
-		json: true,
-	};
-	let results = await helpPaginate(this, 'hcloud', options, new Array<any>(), 'datacenters');
-	//	console.log('Pagination size: ', results.length);
-	if (results) {
-		for (const datacenter of results) {
-			returnData.push({
-				name: datacenter.description,
-				value: datacenter.name,
-			});
-		}
-	}
-	return returnData;
-}
-
 export async function getSshkeys(this: ILoadOptionsFunctions): Promise<INodePropertyOptions[]> {
 	const returnData: INodePropertyOptions[] = [];
 	let options: OptionsWithUri = {

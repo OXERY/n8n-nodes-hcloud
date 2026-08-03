@@ -11,7 +11,6 @@ import * as network from './network';
 import * as ssh from './ssh';
 import * as volume from './volume';
 import * as server_actions from './server_actions';
-import * as datacenter from './datacenter';
 import * as server_types from './server_types';
 
 export const versionDescription: INodeTypeDescription = {
@@ -43,10 +42,6 @@ export const versionDescription: INodeTypeDescription = {
 				{
 					name: 'Image',
 					value: 'image',
-				},
-				{
-					name: 'Datacenter',
-					value: 'datacenter',
 				},
 				{
 					name: 'Server Type',
@@ -106,7 +101,6 @@ export const versionDescription: INodeTypeDescription = {
 		...ssh.descriptions,
 		...volume.descriptions,
 		...server_actions.descriptions,
-		...datacenter.descriptions,
 		...server_types.descriptions,
 	],
 };

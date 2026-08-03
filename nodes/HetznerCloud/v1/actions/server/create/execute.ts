@@ -8,7 +8,6 @@ export async function create(
 ): Promise<INodeExecutionData[]> {
 	const uri: string = `https://api.hetzner.cloud/v1/servers/`;
 	const automount = this.getNodeParameter('automount', index) as boolean;
-	const datacenter = this.getNodeParameter('datacenter', index) as string;
 	const firewalls = this.getNodeParameter('firewalls', index) as any;
 	const image = this.getNodeParameter('image', index) as string;
 	const location = this.getNodeParameter('location', index) as string;
@@ -63,9 +62,6 @@ export async function create(
 	};
 	if (placement_group !== null) {
 		options.body.placement_group = placement_group;
-	}
-	if (datacenter !== '') {
-		options.body.datacenter = datacenter;
 	}
 	if (location !== '') {
 		options.body.location = location;
